@@ -20,6 +20,7 @@ requirements:
     - pip
     - python >=3.6
   run:
+    - hvplot
     - ipython
     - jupyter
     - matplotlib-base
