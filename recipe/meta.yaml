@@ -29,6 +29,7 @@ requirements:
     - seaborn
     - statsmodels
     - xgboost
+    - xlrd
 
 test:
   imports:
