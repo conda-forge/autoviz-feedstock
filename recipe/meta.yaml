@@ -1,7 +1,6 @@
 {% set name = "autoviz" %}
 {% set version = "0.1.2" %}
 
-
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -20,6 +19,9 @@ requirements:
     - pip
     - python >=3.6
   run:
+    - dask
+    - datashader
+    - hvplot
     - ipython
     - jupyter
     - matplotlib-base
@@ -28,11 +30,15 @@ requirements:
     - scikit-learn
     - seaborn
     - statsmodels
+    - wordcloud
     - xgboost
+    - xlrd
 
 test:
-  imports:
-    - autoviz
+  commands:
+    - ipython -c "import autoviz"
+  requires:
+    - ipython
 
 about:
   home: https://github.com/AutoViML/AutoViz
