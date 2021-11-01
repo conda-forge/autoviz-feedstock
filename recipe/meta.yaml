@@ -35,8 +35,10 @@ requirements:
     - xlrd
 
 test:
-  imports:
-    - autoviz
+  commands:
+    - ipython -c "import foobar"
+  requires:
+    - ipython
 
 about:
   home: https://github.com/AutoViML/AutoViz
