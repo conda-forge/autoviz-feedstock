@@ -1,5 +1,5 @@
 {% set name = "autoviz" %}
-{% set version = "0.1.28" %}
+{% set version = "0.1.29" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/autoviz-{{ version }}.tar.gz
-  sha256: 034b2fbeb0af6da29f889d5d467bb5646708a8ecb2e951ad5cdf6c110ae627ef
+  sha256: 26d9e885bcfec1b3b8493bfa7d5c5dadf828148ff02b714b630d5ed4347e420e
 
 build:
   number: 0
