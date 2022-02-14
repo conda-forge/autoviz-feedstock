@@ -1,5 +1,5 @@
 {% set name = "autoviz" %}
-{% set version = "0.1.35" %}
+{% set version = "0.1.36" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/autoviz-{{ version }}.tar.gz
-  sha256: 17146b634630633c72901d56a120eecbaf10e78e23d007742d8c5067a2641a22
+  sha256: 5b854482dd5dca0e4bb02a4f81dd054afd7d328196a5863fc0a32c3a604aceed
 
 build:
   number: 0
@@ -19,17 +19,22 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - dask
-    - datashader
-    - hvplot
+    - bokeh ==2.4.2
+    - emoji
+    - fsspec ==0.8.3
+    - holoviews ==1.14.6
+    - hvplot ==0.7.3
     - ipython
     - jupyter
-    - matplotlib-base
+    - matplotlib-base >=3.3.3
+    - nltk
     - pandas
+    - panel ==0.12.6
     - python >=3.6
     - scikit-learn
-    - seaborn
+    - seaborn >=0.11.1
     - statsmodels
+    - textblob
     - wordcloud
     - xgboost
     - xlrd
@@ -37,8 +42,10 @@ requirements:
 test:
   commands:
     - ipython -c "import autoviz"
+    - pip list | grep -E "{{ name }}\s+{{ version }}"
   requires:
     - ipython
+    - pip
 
 about:
   home: https://github.com/AutoViML/AutoViz
