@@ -19,17 +19,22 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - dask
-    - datashader
-    - hvplot
+    - bokeh ==2.4.2
+    - emoji
+    - fsspec ==0.8.3
+    - holoviews ==1.14.6
+    - hvplot ==0.7.3
     - ipython
     - jupyter
-    - matplotlib-base
+    - matplotlib-base >=3.3.3
+    - nltk
     - pandas
-    - python >=3.6
+    - panel ==0.12.6
+    - python
     - scikit-learn
-    - seaborn
+    - seaborn >=0.11.1
     - statsmodels
+    - textblob
     - wordcloud
     - xgboost
     - xlrd
@@ -37,8 +42,10 @@ requirements:
 test:
   commands:
     - ipython -c "import autoviz"
+    - pip list | grep -E "{{ name }}\s+{{ version }}"
   requires:
     - ipython
+    - pip
 
 about:
   home: https://github.com/AutoViML/AutoViz
