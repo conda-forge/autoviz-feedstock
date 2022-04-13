@@ -1,5 +1,5 @@
 {% set name = "autoviz" %}
-{% set version = "0.1.37" %}
+{% set version = "0.1.38" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/autoviz-{{ version }}.tar.gz
-  sha256: cddbf831e859c2d86c442748a3ae99b0fc6f7bf89a9a98321f1045fe7479c952
+  sha256: 55ea955ee59c1048a2453e5e8f124d53a598be74705a71d198cacf44ad4caf61
 
 build:
   number: 0
@@ -21,15 +21,15 @@ requirements:
   run:
     - bokeh ==2.4.2
     - emoji
-    - fsspec ==0.8.3
+    - fsspec >=0.8.3
     - holoviews ==1.14.6
-    - hvplot ==0.7.3
+    - hvplot >=0.7.3
     - ipython
     - jupyter
     - matplotlib-base >=3.3.3
     - nltk
     - pandas
-    - panel ==0.12.6
+    - panel ~=0.12.6
     - python >=3.6
     - scikit-learn
     - seaborn >=0.11.1
@@ -43,7 +43,7 @@ requirements:
 test:
   commands:
     - ipython -c "import autoviz"
-    - pip list | grep -E "{{ name }}\s+{{ version }}"
+    - pip check
   requires:
     - ipython
     - pip
