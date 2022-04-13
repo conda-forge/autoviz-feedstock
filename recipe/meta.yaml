@@ -21,15 +21,15 @@ requirements:
   run:
     - bokeh ==2.4.2
     - emoji
-    - fsspec ==0.8.3
+    - fsspec >=0.8.3
     - holoviews ==1.14.6
-    - hvplot ==0.7.3
+    - hvplot >=0.7.3
     - ipython
     - jupyter
     - matplotlib-base >=3.3.3
     - nltk
     - pandas
-    - panel ==0.12.6
+    - panel ~=0.12.6
     - python >=3.6
     - scikit-learn
     - seaborn >=0.11.1
@@ -43,7 +43,7 @@ requirements:
 test:
   commands:
     - ipython -c "import autoviz"
-    - pip list | grep -E "{{ name }}\s+{{ version }}"
+    - pip check
   requires:
     - ipython
     - pip
