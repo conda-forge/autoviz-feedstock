@@ -1,5 +1,5 @@
 {% set name = "autoviz" %}
-{% set version = "0.1.58" %}
+{% set version = "0.1.600" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/autoviz-{{ version }}.tar.gz
-  sha256: 73edd50469bd0a5718d267745398566a4580eaa906975c28e393d303b67d6da6
+  sha256: 887f8ca8f6f4a95c7d0ad742bf9bcfdc5cd155a5fa45ae3fb043d47c60b4d51b
 
 build:
   number: 0
@@ -25,12 +25,11 @@ requirements:
     - holoviews >=1.14.6
     - hvplot >=0.7.3
     - ipython
-    - jupyter
     - matplotlib-base >=3.3.3
     - numpy
     - nltk
     - pandas
-    - panel ~=0.12.6
+    - panel >=0.12.6
     - pyamg
     - python >=3.6
     - scikit-learn
@@ -41,6 +40,9 @@ requirements:
     - wordcloud
     - xgboost >=0.82
     - xlrd
+    
+    # These dependencies are not listed but are actually required
+    - jupyter
 
 test:
   commands:

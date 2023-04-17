@@ -1,11 +1,11 @@
-About autoviz
-=============
+About autoviz-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/autoviz-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/AutoViML/AutoViz
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/autoviz-feedstock/blob/main/LICENSE.txt)
 
 Summary: Automatically Visualize any dataset, any size with a single line of code
 
