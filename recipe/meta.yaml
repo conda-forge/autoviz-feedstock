@@ -40,6 +40,9 @@ requirements:
     - wordcloud
     - xgboost >=0.82
     - xlrd
+    
+    # These dependencies are not listed but are actually required
+    - jupyter
 
 test:
   commands:
