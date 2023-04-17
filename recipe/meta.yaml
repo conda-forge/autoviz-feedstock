@@ -25,12 +25,11 @@ requirements:
     - holoviews >=1.14.6
     - hvplot >=0.7.3
     - ipython
-    - jupyter
     - matplotlib-base >=3.3.3
     - numpy
     - nltk
     - pandas
-    - panel ~=0.12.6
+    - panel >=0.12.6
     - pyamg
     - python >=3.6
     - scikit-learn
