@@ -1,5 +1,5 @@
 {% set name = "autoviz" %}
-{% set version = "0.1.603" %}
+{% set version = "0.1.604" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/autoviz-{{ version }}.tar.gz
-  sha256: 62f136a29d2b4472601e55024b49191933b0ec1bf35c498f248b8f7f12139297
+  sha256: f7e63ec8993a810112a18047bf66f359d9872379cdf29e51afdfa2b057fe1c4b
 
 build:
   number: 0
@@ -22,9 +22,10 @@ requirements:
     - bokeh >=2.4.2
     - emoji
     - fsspec >=0.8.3
-    - holoviews >=1.14.6
+    - holoviews ~=1.14.9
     - hvplot >=0.7.3
     - ipython
+    - jupyter
     - matplotlib-base >=3.3.3
     - numpy
     - nltk
@@ -40,9 +41,6 @@ requirements:
     - wordcloud
     - xgboost >=0.82
     - xlrd
-
-    # These dependencies are not listed but are actually required
-    - jupyter
 
 test:
   commands:
