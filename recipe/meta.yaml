@@ -19,17 +19,18 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - bokeh >=2.4.2
+    - bokeh ~=2.4.2
     - emoji
     - fsspec >=0.8.3
     - holoviews ~=1.14.9
-    - hvplot >=0.7.3
+    - hvplot ~=0.7.3
     - ipython
     - jupyter
     - matplotlib-base >=3.3.3
     - numpy
     - nltk
     - pandas
+    - pandas-dq ==1.28 
     - panel >=0.12.6
     - pyamg
     - python >=3.6
