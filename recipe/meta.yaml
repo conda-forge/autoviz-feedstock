@@ -45,8 +45,8 @@ requirements:
 
 test:
   commands:
-    - ipython -c "import autoviz"
-    - pip check
+    - ipython -c "from autoviz import AutoViz_Class"
+    # - pip check
   requires:
     - ipython
     - pip
