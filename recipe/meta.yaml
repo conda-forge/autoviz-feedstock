@@ -28,7 +28,8 @@ requirements:
     - numpy
     - pandas
     - pyamg
-    - matplotlib-base >=3.3.3
+    # Adding <3.6 here as the "seaborn" style was deprecated upstream
+    - matplotlib-base >=3.3.3,<3.6
     - seaborn >=0.11.1
     - scikit-learn
     - statsmodels
