@@ -23,7 +23,7 @@ requirements:
     - xlrd
     - wordcloud
     - emoji
-    - numpy
+    - numpy <1.25.0
     - pandas
     - pyamg
     - matplotlib-base >=3.3.3,<3.7
