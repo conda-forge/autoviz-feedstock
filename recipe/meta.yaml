@@ -39,7 +39,7 @@ requirements:
     - xgboost >=0.82,<1.7
     - fsspec >=0.8.3
     - typing-extensions >=4.1.1
-    - pandas-dq >=1.28
+    - pandas-dq >=1.29
 
 test:
   commands:
