@@ -1,5 +1,5 @@
 {% set name = "autoviz" %}
-{% set version = "0.1.803" %}
+{% set version = "0.1.804" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/autoviz-{{ version }}.tar.gz
-  sha256: 80b6e936f65f0fdd91a2c620d0c05dfd73d11132bdf53497a6e9172ddf5cc67d
+  sha256: 8b6320aeeecde1899dd0ba3a77939440a48b9106e87faea78b190b15aef7692c
 
 build:
   number: 0
@@ -17,17 +17,17 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7,<3.9
+    - python >=3.7
   run:
-    - python >=3.7,<3.9
+    - python >=3.7
     - xlrd
     - wordcloud
     - emoji
-    - numpy
+    - numpy <1.25.0
     - pandas
     - pyamg
-    - matplotlib-base >=3.3.3,<3.7
-    - seaborn >=0.13
+    - matplotlib-base <=3.7.4
+    - seaborn >=0.12.2
     - scikit-learn
     - statsmodels
     - nltk
@@ -36,15 +36,15 @@ requirements:
     - bokeh ~=2.4.2
     - hvplot ~=0.7.3
     - panel >=0.12.6
-    - xgboost >=0.82
+    - xgboost >=0.82,<1.7
     - fsspec >=0.8.3
     - typing-extensions >=4.1.1
-    - pandas-dq >=1.28
+    - pandas-dq >=1.29
 
 test:
   commands:
     - ipython -c "from autoviz import AutoViz_Class"
-    # - pip check
+    - pip check
   requires:
     - ipython
     - pip
