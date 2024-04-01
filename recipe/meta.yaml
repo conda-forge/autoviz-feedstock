@@ -23,7 +23,7 @@ requirements:
     - xlrd
     - wordcloud
     - emoji
-    - numpy <1.25.0
+    - numpy >=1.25.0
     - pandas
     - pyamg
     - matplotlib-base <=3.7.4
@@ -32,10 +32,10 @@ requirements:
     - statsmodels
     - nltk
     - textblob
-    - holoviews ~=1.14.9
+    - holoviews >=1.15.3
     - bokeh ~=2.4.2
-    - hvplot ~=0.7.3
-    - panel >=0.12.6
+    - hvplot >=0.9.2
+    - panel >=1.4.0
     - xgboost >=0.82,<1.7
     - fsspec >=0.8.3
     - typing-extensions >=4.1.1
