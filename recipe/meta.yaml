@@ -1,5 +1,5 @@
 {% set name = "autoviz" %}
-{% set version = "0.1.806" %}
+{% set version = "0.1.807" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/autoviz-{{ version }}.tar.gz
-  sha256: 96cde826dc4690954fcbb976331c6830c69c44ff7d8e4d629c16d925c0045ab9
+  sha256: 4937fc7462f4bcba076026a5df4611db97df80995d9744b21785895e15c00181
 
 build:
   number: 0
@@ -23,7 +23,7 @@ requirements:
     - xlrd
     - wordcloud
     - emoji
-    - numpy <1.25.0
+    - numpy >=1.25.0
     - pandas
     - pyamg
     - matplotlib-base <=3.7.4
@@ -32,10 +32,9 @@ requirements:
     - statsmodels
     - nltk
     - textblob
-    - holoviews ~=1.14.9
-    - bokeh ~=2.4.2
-    - hvplot ~=0.7.3
-    - panel >=0.12.6
+    - holoviews >=1.15.3
+    - hvplot >=0.9.2
+    - panel >=1.4.0
     - xgboost >=0.82,<1.7
     - fsspec >=0.8.3
     - typing-extensions >=4.1.1
