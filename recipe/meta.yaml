@@ -1,5 +1,5 @@
 {% set name = "autoviz" %}
-{% set version = "0.1.807" %}
+{% set version = "0.1.808" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/autoviz-{{ version }}.tar.gz
-  sha256: 4937fc7462f4bcba076026a5df4611db97df80995d9744b21785895e15c00181
+  sha256: 0281c955ae2f269a60d6092e6240b8e0905851bf7d790f921323402322c99b24
 
 build:
   number: 0
@@ -24,7 +24,7 @@ requirements:
     - wordcloud
     - emoji
     - numpy >=1.25.0
-    - pandas
+    - pandas <2.0
     - pyamg
     - matplotlib-base <=3.7.4
     - seaborn >=0.12.2
