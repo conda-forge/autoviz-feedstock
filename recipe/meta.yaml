@@ -11,34 +11,52 @@ source:
 
 build:
   number: 0
-  noarch: python
+  skip: True  # [py<37]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python
   run:
-    - python >=3.7
+    - python
     - xlrd
     - wordcloud
     - emoji
-    - numpy >=1.25.0
-    - pandas <2.0
     - pyamg
-    - matplotlib-base <=3.7.4
-    - seaborn >=0.12.2
     - scikit-learn
     - statsmodels
     - nltk
     - textblob
-    - holoviews >=1.15.3
-    - hvplot >=0.9.2
-    - panel >=1.4.0
     - xgboost >=0.82,<1.7
     - fsspec >=0.8.3
     - typing-extensions >=4.1.1
     - pandas-dq >=1.29
+
+    - numpy <1.24  # [py<310]
+    - hvplot ~=0.7.3  # [py<310]
+    - holoviews <=1.14.9  # [py<310]
+    - panel ~=0.14.4  # [py<310]
+    - param ==1.13.0  # [py<310]
+    - pandas <2.0  # [py<310]
+    - matplotlib-base <=3.7.4  # [py<310]
+    - seaborn <=0.12.2  # [py<310]
+
+    - numpy >=1.24.0  # [py>=310 and py<311]
+    - hvplot >=0.9.2  # [py>=310 and py<311]
+    - holoviews >=1.16.0  # [py>=310 and py<311]
+    - panel >=1.4.0  # [py>=310 and py<311]
+    - pandas >=2.0  # [py>=310 and py<311]
+    - matplotlib >3.7.4  # [py>=310 and py<311]
+    - seaborn >0.12.2  # [py>=310 and py<311]
+
+    - numpy >=1.25.0  # [py>311]
+    - hvplot >=0.9.2  # [py>311]
+    - holoviews >=1.15.3  # [py>311]
+    - panel >=1.4.0
+    - pandas <2.0  # [py>311]
+    - matplotlib >3.7.4  # [py>311]
+    - seaborn >0.12.2  # [py>311]
 
 test:
   commands:
