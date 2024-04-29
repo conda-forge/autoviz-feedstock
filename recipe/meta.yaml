@@ -47,15 +47,15 @@ requirements:
     - holoviews >=1.16.0  # [py>=310 and py<311]
     - panel >=1.4.0  # [py>=310 and py<311]
     - pandas >=2.0  # [py>=310 and py<311]
-    - matplotlib >3.7.4  # [py>=310 and py<311]
+    - matplotlib-base >3.7.4  # [py>=310 and py<311]
     - seaborn >0.12.2  # [py>=310 and py<311]
 
     - numpy >=1.25.0  # [py>=311]
     - hvplot >=0.9.2  # [py>=311]
     - holoviews >=1.15.3  # [py>=311]
-    - panel >=1.4.0 # [py>=311]
+    - panel >=1.4.0  # [py>=311]
     - pandas <2.0  # [py>=311]
-    - matplotlib >3.7.4  # [py>=311]
+    - matplotlib-base >3.7.4  # [py>=311]
     - seaborn >0.12.2  # [py>=311]
 
 test:
