@@ -24,9 +24,9 @@ requirements:
     - wordcloud
     - emoji
     - numpy >=1.25.0
-    - pandas <2.0
+    - pandas >=2.0
     - pyamg
-    - matplotlib-base <=3.7.4
+    - matplotlib-base >3.7.4
     - seaborn >=0.12.2
     - scikit-learn
     - statsmodels
