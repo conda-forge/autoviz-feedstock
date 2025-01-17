@@ -6,20 +6,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/autoviz-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/autoviz-{{ version }}.tar.gz
   sha256: 5ce28552255b5a6e52e81896339f5468b50b33a1600cc7057c3b4ad80c5a6e9a
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - xlrd
     - wordcloud
     - emoji
@@ -47,6 +47,7 @@ test:
   requires:
     - ipython
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/AutoViML/AutoViz
