@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/autoviz-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/autoviz-{{ version }}.tar.gz
   sha256: 1c659d5957340301bc32818b0362f5065d23ca391e8bc1690af2db2e40b255ef
 
 build:
@@ -17,9 +17,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
+    - setuptools
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - xlrd
     - wordcloud
     - emoji
