@@ -49,6 +49,7 @@ test:
   requires:
     - ipython
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/AutoViML/AutoViz
